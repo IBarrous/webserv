@@ -26,12 +26,12 @@ void    Server::CreateSocket()
     if (bind(server_socket, res->ai_addr, res->ai_addrlen) == -1)
     {
         std::cerr << "Couldn't perform binding !" << std::endl;
-        exit(1);
+        close(server_socket);
     }
 
     if (listen(server_socket, 400) == -1)
     {
         std::cerr << "Couldn't perfom listening with the Socket !" << std::endl;
-        exit(1);
+        close(server_socket);
     }
 }

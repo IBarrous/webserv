@@ -7,6 +7,8 @@
 #include <string>
 #include <cstdlib>
 #include <string.h>
+#include <unistd.h>
+
 class Server{
     public :
         std::string     servername;
